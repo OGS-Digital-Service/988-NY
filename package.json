@@ -1,0 +1,20 @@
+{
+  "name": "988-ny",
+  "version": "1.0.0",
+  "description": "NYS 988 Microsite",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "pa11y-ci",
+    "start": "npx eleventy --serve",
+    "build": "npx eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "pa11y": "^7.0.0",
+    "pa11y-ci": "^3.1.0",
+    "pa11y-ci-reporter-html": "^6.0.2"
+  }
+}
