@@ -7,17 +7,13 @@
 .nysds-hero-container {
     width: 100%;
     display: flex;
-    min-height: 512px;
-    align-items: center;
+    align-items: end;
 }
 
 .nysds-hero-information {
-    margin-top: 0px;
-    margin: 0px 60px;
-    width: 580px;
-    padding: 45px 45px;
-    border-radius: 30px;
+    width: 100%;
     color: #fff;
+    padding: 45px 35px;
 }
 
 .nysds-hero-title {
@@ -52,7 +48,6 @@
     font-weight: bold;
 }
 
-
 .nysds-hero-link:hover {
     text-decoration-thickness: 3px;
     
@@ -72,12 +67,6 @@
     background-repeat: no-repeat;
 }
 
-
-
-
-
-
-
 .hhs-dark {
     background-color: #43285D;
 }
@@ -89,3 +78,18 @@
 }
 
 
+@media (min-width: 1280px) {
+    .nysds-hero-information {
+        margin-top: 0px;
+        margin: 0px 60px;
+        width: 580px;
+        padding: 45px 45px;
+        border-radius: 30px;
+    }
+    .nysds-hero-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        min-height: 512px;
+    }
+}
