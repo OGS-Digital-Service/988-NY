@@ -18,7 +18,18 @@
     padding: 45px 45px;
     border-radius: 30px;
     color: #fff;
+}
 
+.nysds-hero-title {
+    font-size: 36px;
+    line-height: 1.15em;
+    font-weight: bold;
+}
+
+.nysds-hero-description {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
 }
 
 .nysds-hero-links-list {

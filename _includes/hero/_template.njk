@@ -3,7 +3,9 @@
             <div class="">
 
                 <div class="nysds-hero-information hhs-dark">
-                    <p class="nysds-hero-date">{{params.date}}</p>
+                    {% if params.date %}
+                        <p class="nysds-hero-date">{{params.date}}</p>
+                    {% endif %}
                     <h2 class="nysds-hero-title">{{params.title}}</h2>
                     <p class="nysds-hero-description"> {{params.description }} </p>
                     
