@@ -1,1 +1,24 @@
-<div class="nysds-hero">{{params.title}}</div>
+<section class="nysds-hero-container {% if not params.image %} hhs-mid {%endif%}">
+        <div class="">
+            <div class="">
+
+                <div class="nysds-hero-information hhs-dark">
+                    <p class="nysds-hero-date">{{params.date}}</p>
+                    <h2 class="nysds-hero-title">{{params.title}}</h2>
+                    <p class="nysds-hero-description"> {{params.description }} </p>
+                    
+                    {% if params.links %}
+                    <ul class="nysds-hero-links-list">
+                        {% for herolink in params.links%}
+                        <li>
+                            <a class="nysds-hero-link" href="{{herolink.link}}">{{herolink.text}}</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {%endif%}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>  
