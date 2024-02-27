@@ -4,8 +4,8 @@ template.innerHTML = `
   <style>
     {%- include "./_hero.css" -%}
   </style>
+
   {%- include "./_template.njk" -%}
-  
   
 `;
 
@@ -18,8 +18,4 @@ class NYSDSHero extends HTMLElement {
 window.customElements.define('nysds-hero', NYSDSHero);
 </script>
 
-<nysds-hero>
-  
-  {%- include "./_slot.njk" -%}
- 
-</nysds-hero>
+<nysds-hero></nysds-hero>

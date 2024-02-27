@@ -1,0 +1,9 @@
+
+<h2 slot="heading" class="nysds-hero-title">{{params.title}}</h2>
+<p slot="description" class="nysds-hero-description"> {{params.description }} </p>
+
+{% for herolink in params.links%}
+            <li slot="link">
+                <a  class="nysds-hero-link" href="{{herolink.link}}">{{herolink.text}}</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
+            </li>
+{% endfor %}

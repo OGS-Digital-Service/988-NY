@@ -243,29 +243,18 @@ template.innerHTML = `
     }
 }
 </style><section class="nysds-hero-container  hhs-mid ">
+    <div class="nysds-hero-information hhs-dark">
         
-
-                <div class="nysds-hero-information hhs-dark">
-                    
-                    <h2 class="nysds-hero-title">988 More than a Number</h2>
-                    <p class="nysds-hero-description"> 988 is more than just an easy-to-remember number. It is a direct connection to confidential caring support for anyone in mental health distress.  </p>
-                    
-                    
-                    <ul class="nysds-hero-links-list">
-                        
-                        <li>
-                            <a class="nysds-hero-link" href="https://ny.gov">First Link</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
-                        </li>
-                        
-                        <li>
-                            <a class="nysds-hero-link" href="https://ny.gov">Second Link</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
-                        </li>
-                        
-                    </ul>
-                    
-                </div>
-
-     
+        <slot name="heading"></slot>
+        <slot name="description"></slot>
+        
+        
+        <ul class="nysds-hero-links-list">
+            <slot name="link"></slot>
+            
+        </ul>
+        
+    </div>
 </section>  `;
 
 class NYSDSHero extends HTMLElement {
@@ -277,8 +266,165 @@ class NYSDSHero extends HTMLElement {
 window.customElements.define('nysds-hero', NYSDSHero);
 </script>
 
-<nysds-hero></nysds-hero>
+<nysds-hero>
+<h2 slot="heading" class="nysds-hero-title">988 More than a Number</h2>
+<p slot="description" class="nysds-hero-description"> 988 is more than just an easy-to-remember number. It is a direct connection to confidential caring support for anyone in mental health distress.  </p>
 
+
+            <li slot="link">
+                <a  class="nysds-hero-link" href="https://ny.gov">First Link</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
+            </li>
+
+            <li slot="link">
+                <a  class="nysds-hero-link" href="https://ny.gov">Second Link</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
+            </li>
+
+</nysds-hero>
+
+
+
+  
+
+<script>
+const template = document.createElement('template');
+template.innerHTML = `
+  <style>* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.nysds-hero-container {
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.nysds-hero-information {
+    width: 100%;
+    color: #fff;
+    padding: 45px 35px;
+}
+
+.nysds-hero-title {
+    font-size: 36px;
+    line-height: 1.15em;
+    font-weight: bold;
+}
+
+.nysds-hero-description {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.nysds-hero-links-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nysds-hero-links-list li {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+    margin-top: 35px;
+}
+
+.nysds-hero-link {
+    color: #FACE00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nysds-hero-link:hover {
+    text-decoration-thickness: 3px;
+    
+}
+
+.nysds-hero-link:focus {
+    text-decoration-thickness: 3px;
+    outline-offset: 4px;
+}
+
+.nysds-hero-link-arrow {
+    display: block;
+    height: 16px;
+    width: 16px;
+    margin: 0 5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23FACE00' d='M334.5 414c8.8 3.8 19 2 26-4.6l144-136c4.8-4.5 7.5-10.8 7.5-17.4s-2.7-12.9-7.5-17.4l-144-136c-7-6.6-17.2-8.4-26-4.6s-14.5 12.5-14.5 22l0 72L32 192c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l288 0 0 72c0 9.6 5.7 18.2 14.5 22z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+}
+
+.nysds-hero-link-arrow:dir(rtl) {
+    rotate: 180deg;
+}
+
+.hhs-dark {
+    background-color: #43285D;
+}
+.hhs-mid {
+    background-color: #8b7f9f;
+}
+.hhs-light {
+    background-color: #d3d5e3;
+}
+
+
+@media (min-width: 1280px) {
+    .nysds-hero-information {
+        margin-top: 0px;
+        margin: 0px 60px;
+        width: 580px;
+        padding: 45px 45px;
+        border-radius: 30px;
+    }
+    .nysds-hero-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        min-height: 512px;
+    }
+}
+</style><section class="nysds-hero-container  hhs-mid ">
+    <div class="nysds-hero-information hhs-dark">
+        
+        <slot name="heading"></slot>
+        <slot name="description"></slot>
+        
+        
+        <ul class="nysds-hero-links-list">
+            <slot name="link"></slot>
+            
+        </ul>
+        
+    </div>
+</section>  `;
+
+class NYSDSHero extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({mode: 'open'});
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+  }
+}
+window.customElements.define('nysds-hero', NYSDSHero);
+</script>
+
+<nysds-hero>
+<h2 slot="heading" class="nysds-hero-title">Second Hero</h2>
+<p slot="description" class="nysds-hero-description"> The second one that has other stuff in here  </p>
+
+
+            <li slot="link">
+                <a  class="nysds-hero-link" href="https://ogs.ny.gov">new one</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
+            </li>
+
+            <li slot="link">
+                <a  class="nysds-hero-link" href="https://ogs.ny.gov">other new one</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
+            </li>
+
+</nysds-hero>
 
 
 
