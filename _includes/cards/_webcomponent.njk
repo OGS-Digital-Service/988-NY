@@ -2,20 +2,21 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
-    {%- include "./_hero.css" -%}
+    {%- include "./_cards.css" -%}
   </style>
 
   {%- include "./_template.njk" -%}
   
 `;
 
-class NYSDSHero extends HTMLElement {
+class NYSDSCards extends HTMLElement {
   connectedCallback() {
     this.attachShadow({mode: 'open'});
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
-window.customElements.define('nysds-hero', NYSDSHero);
+window.customElements.define('nysds-cards', NYSDSCards);
 </script>
 
-<nysds-hero></nysds-hero>
+<nysds-cards>
+</nysds-cards>

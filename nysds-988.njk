@@ -3,7 +3,7 @@ layout: omh.njk
 title: NYSDS 988 Web Component Page
 ---
 
-{% from './_includes/_components.njk' import hero  %}
+{% from './_includes/_components.njk' import hero, cards  %}
 
 
 {{ hero({
@@ -20,7 +20,7 @@ title: NYSDS 988 Web Component Page
         },
         {
             text:"Second Link",
-            link:"https://ny.gov",
+            link:"https://ogs.ny.gov",
             order: 2,
             arialabel:""
         }
@@ -31,26 +31,18 @@ title: NYSDS 988 Web Component Page
 
 
   
-
-{{ hero({
-    title: "Second Hero",
-    description:"The second one that has other stuff in here ",
-    image:"",
-    date:"",
-    links: [
-        {
-            text:"first",
-            link:"https://ogs.ny.gov",
-            order: 2,
-            arialabel:"something else"
-        },
-        {
-            text:"other new one",
-            link:"https://ogs.ny.gov",
-            order: 1,
-            arialabel:""
-        }
-    ]
+{{
+    cards({
+        heading:"Card area title",
+        intro:"Some descriptive text here",
+        cards:[
+            {
+                title:"This goes to another resource",
+                content:"A description for this thing",
+                link:"https://whitehouse.gov",
+                image:"",
+                imagealt:"alt text for this image"
+            }
+        ]
     })
 }}
-

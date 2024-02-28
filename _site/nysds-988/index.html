@@ -263,7 +263,7 @@ template.innerHTML = `
                 </li>
             
                 <li>
-                    <a class="nysds-hero-link" href="https://ny.gov"><slot name="2"></slot></a>
+                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="2"></slot></a>
                     <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
                 </li>
             
@@ -299,88 +299,90 @@ window.customElements.define('nysds-hero', NYSDSHero);
 
 
   
-
 <script>
 const template = document.createElement('template');
 template.innerHTML = `
-    <style>* {
+  <style>* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
 }
 
-.nysds-hero-container {
-    width: 100%;
+.cards-container {
     display: flex;
-    align-items: end;
-}
-
-.nysds-hero-information {
-    width: 100%;
-    color: #fff;
-    padding: 45px 35px;
-}
-
-.nysds-hero-title {
-    font-size: 36px;
-    line-height: 1.15em;
-    font-weight: 500;
-    font-family: "ProximaNovaExtrabold",sans-serif;
-}
-
-.nysds-hero-description {
-    font-size: 18px;
-    line-height: 25px;
-    margin: 0;
-}
-
-.nysds-hero-links-list {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nysds-hero-links-list li {
-    display: flex;
-    align-items: center;
-    margin-right: 45px;
-    margin-top: 35px;
-}
-
-.nysds-hero-link {
-    color: #FACE00;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-::slotted(a) {
-    color: #FACE00;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.nysds-hero-link:hover {
-    text-decoration-thickness: 3px;
+    flex-direction: column;
+    margin: 50px 0px;
     
 }
 
-.nysds-hero-link:focus {
-    text-decoration-thickness: 3px;
-    outline-offset: 4px;
+.cards-heading {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 100%;
+    font-family: 'Figtree', sans-serif;
 }
 
-.nysds-hero-link-arrow {
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.nysds-card {
+    width: 320px;
+    margin: 1.5rem 1rem;
+    background: #ededed;
+    border: 1px solid #d0d0ce;
+    border-radius: 15px;
+}
+
+.card-image {
+    border-radius: 15px;
+    object-fit: cover;
+    height: 220px;
+    width: 100%;
     display: block;
-    height: 16px;
-    width: 16px;
-    margin: 0 5px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23FACE00' d='M334.5 414c8.8 3.8 19 2 26-4.6l144-136c4.8-4.5 7.5-10.8 7.5-17.4s-2.7-12.9-7.5-17.4l-144-136c-7-6.6-17.2-8.4-26-4.6s-14.5 12.5-14.5 22l0 72L32 192c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l288 0 0 72c0 9.6 5.7 18.2 14.5 22z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
 }
 
-.nysds-hero-link-arrow:dir(rtl) {
-    rotate: 180deg;
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin: 0 25px 0 0;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+.card-link {
+    color: #004DD1;
+    text-decoration: none;
+    font-family: 'Figtree', sans-serif;
+}
+
+.card-link:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.card-link:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+.card-description {
+    font-size: 16px;
+    font-family: 'Figtree', sans-serif;
+}
+
+.cards-intro {
+    font-size: 17px;
+    margin: 15px 0px;
+    text-align: center;
+    font-family: 'Figtree', sans-serif;
 }
 
 .hhs-dark {
@@ -395,67 +397,41 @@ template.innerHTML = `
 
 
 @media (min-width: 1280px) {
-    .nysds-hero-information {
-        margin-top: 0px;
-        margin: 0px 60px;
-        width: 580px;
-        padding: 45px 45px;
-        border-radius: 30px;
-    }
-    .nysds-hero-container {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        min-height: 512px;
-    }
-}
-</style><section class="nysds-hero-container  hhs-mid ">
-    <div class="nysds-hero-information hhs-dark">
-        
-        <h2 class="nysds-hero-title"><slot name="heading"></slot></h2>
-        <p class="nysds-hero-description"><slot name="description"></slot></p>
-        
-        <ul class="nysds-hero-links-list">
-            
-                <li>
-                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="2"></slot></a>
-                    <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
-                </li>
-            
-                <li>
-                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="1"></slot></a>
-                    <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
-                </li>
-            
-        </ul>
-        
-    </div>
-</section>  `;
 
-class NYSDSHero extends HTMLElement {
+}
+</style><div class="cards-container">
+    <h3 class="cards-heading">Card area title</h3>
+    <p class="cards-intro">Some descriptive text here</p>
+        <div class="cards-wrapper">
+        
+            <div class="nysds-card">
+                <div class="">
+                    <a href="https://whitehouse.gov" tabindex="-1" aria-hidden="true">
+                    <img class="card-image" src="" alt="alt text for this image" />
+                </a>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a class="card-link" href="https://whitehouse.gov">This goes to another resource</a>
+                    </h4>
+                    
+                </div>
+            </div>
+        
+        </div>
+</div>`;
+
+class NYSDSCards extends HTMLElement {
   connectedCallback() {
     this.attachShadow({mode: 'open'});
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
-window.customElements.define('nysds-hero', NYSDSHero);
+window.customElements.define('nysds-cards', NYSDSCards);
 </script>
 
-<nysds-hero><span slot="heading">Second Hero</span>
-<span slot="description">The second one that has other stuff in here  </span>
-
-<span slot="2">first</span>
-
-<span slot="1">other new one</span>
-
-
-
-
-
-
-
-</nysds-hero>
-
+<nysds-cards>
+</nysds-cards>
 
 
 
