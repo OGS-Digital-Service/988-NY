@@ -1,13 +1,11 @@
 <script>
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>
-    {%- include "./_hero.css" -%}
-  </style>
-  {%- include "./_template.njk" -%}
-  
-  
-`;
+    <style>
+      {%- include "./_hero.css" -%}
+    </style>
+    {%- include "./_template.njk" -%}
+  `;
 
 class NYSDSHero extends HTMLElement {
   connectedCallback() {
@@ -19,7 +17,5 @@ window.customElements.define('nysds-hero', NYSDSHero);
 </script>
 
 <nysds-hero>
-  
-  {%- include "./_slot.njk" -%}
- 
+ {%- include "./_slot.njk" -%}
 </nysds-hero>

@@ -143,10 +143,11 @@
 <script>
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>* {
+    <style>* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    
 }
 
 .nysds-hero-container {
@@ -165,6 +166,7 @@ template.innerHTML = `
     font-size: 36px;
     line-height: 1.15em;
     font-weight: bold;
+
 }
 
 .nysds-hero-description {
@@ -188,6 +190,12 @@ template.innerHTML = `
 }
 
 .nysds-hero-link {
+    color: #FACE00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+::slotted(a) {
     color: #FACE00;
     text-transform: uppercase;
     font-weight: bold;
@@ -243,16 +251,36 @@ template.innerHTML = `
     }
 }
 </style><section class="nysds-hero-container  hhs-mid ">
+
     <div class="nysds-hero-information hhs-dark">
+
         
-        <slot name="heading"></slot>
-        <slot name="description"></slot>
+
+        <h2 class="nysds-hero-title"><slot name="heading"></slot></h2>
         
+
+        <p class="nysds-hero-description"><slot name="description"></slot></p>
+
         
+
         <ul class="nysds-hero-links-list">
-            <slot name="link"></slot>
+            
+                <li>
+                    <a class="nysds-hero-link" href="https://ny.gov"><slot name="1"></slot>
+ </a>
+                    <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
+                </li>
+                
+            
+                <li>
+                    <a class="nysds-hero-link" href="https://ny.gov"><slot name="2"></slot>
+ </a>
+                    <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
+                </li>
+                
             
         </ul>
+        
         
     </div>
 </section>  `;
@@ -266,18 +294,18 @@ class NYSDSHero extends HTMLElement {
 window.customElements.define('nysds-hero', NYSDSHero);
 </script>
 
-<nysds-hero>
-<h2 slot="heading" class="nysds-hero-title">988 More than a Number</h2>
-<p slot="description" class="nysds-hero-description"> 988 is more than just an easy-to-remember number. It is a direct connection to confidential caring support for anyone in mental health distress.  </p>
+<nysds-hero><span slot="heading">988 More than a Number</span>
+<span slot="description">988 is more than just an easy-to-remember number. It is a direct connection to confidential caring support for anyone in mental health distress.  </span>
+
+<span slot="1">First Link</span>
+
+<span slot="2">Second Link</span>
 
 
-            <li slot="link">
-                <a  class="nysds-hero-link" href="https://ny.gov">First Link</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
-            </li>
 
-            <li slot="link">
-                <a  class="nysds-hero-link" href="https://ny.gov">Second Link</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
-            </li>
+
+
+
 
 </nysds-hero>
 
@@ -288,10 +316,11 @@ window.customElements.define('nysds-hero', NYSDSHero);
 <script>
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>* {
+    <style>* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    
 }
 
 .nysds-hero-container {
@@ -310,6 +339,7 @@ template.innerHTML = `
     font-size: 36px;
     line-height: 1.15em;
     font-weight: bold;
+
 }
 
 .nysds-hero-description {
@@ -333,6 +363,12 @@ template.innerHTML = `
 }
 
 .nysds-hero-link {
+    color: #FACE00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+::slotted(a) {
     color: #FACE00;
     text-transform: uppercase;
     font-weight: bold;
@@ -388,16 +424,36 @@ template.innerHTML = `
     }
 }
 </style><section class="nysds-hero-container  hhs-mid ">
+
     <div class="nysds-hero-information hhs-dark">
+
         
-        <slot name="heading"></slot>
-        <slot name="description"></slot>
+
+        <h2 class="nysds-hero-title"><slot name="heading"></slot></h2>
         
+
+        <p class="nysds-hero-description"><slot name="description"></slot></p>
+
         
+
         <ul class="nysds-hero-links-list">
-            <slot name="link"></slot>
+            
+                <li>
+                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="2"></slot>
+ </a>
+                    <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
+                </li>
+                
+            
+                <li>
+                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="1"></slot>
+ </a>
+                    <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
+                </li>
+                
             
         </ul>
+        
         
     </div>
 </section>  `;
@@ -411,18 +467,18 @@ class NYSDSHero extends HTMLElement {
 window.customElements.define('nysds-hero', NYSDSHero);
 </script>
 
-<nysds-hero>
-<h2 slot="heading" class="nysds-hero-title">Second Hero</h2>
-<p slot="description" class="nysds-hero-description"> The second one that has other stuff in here  </p>
+<nysds-hero><span slot="heading">Second Hero</span>
+<span slot="description">The second one that has other stuff in here  </span>
+
+<span slot="2">first</span>
+
+<span slot="1">other new one</span>
 
 
-            <li slot="link">
-                <a  class="nysds-hero-link" href="https://ogs.ny.gov">new one</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
-            </li>
 
-            <li slot="link">
-                <a  class="nysds-hero-link" href="https://ogs.ny.gov">other new one</a><span class="nysds-hero-link-arrow" aria-hidden="true"></span>
-            </li>
+
+
+
 
 </nysds-hero>
 
