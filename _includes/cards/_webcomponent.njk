@@ -5,7 +5,7 @@ template.innerHTML = `
     {%- include "./_cards.css" -%}
   </style>
 
-  {%- include "./_template.njk" -%}
+  
   
 `;
 
@@ -19,4 +19,5 @@ window.customElements.define('nysds-cards', NYSDSCards);
 </script>
 
 <nysds-cards>
+  {%- include "./_template.njk" -%}
 </nysds-cards>

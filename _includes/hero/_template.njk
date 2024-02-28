@@ -3,13 +3,13 @@
         {% if params.date %}
             <p class="nysds-hero-date">{{params.date}}</p>
         {% endif %}
-        <h2 class="nysds-hero-title"><slot name="heading"></slot></h2>
-        <p class="nysds-hero-description"><slot name="description"></slot></p>
+        <h2 class="nysds-hero-title">{{params.title}}</h2>
+        <p class="nysds-hero-description">{{params.description }}</p>
         {% if params.links %}
         <ul class="nysds-hero-links-list">
             {% for herolink in params.links%}
                 <li>
-                    <a class="nysds-hero-link" href="{{herolink.link}}"><slot name="{{herolink.order}}"></slot></a>
+                    <a class="link" href="{{herolink.link}}">{{herolink.text}}</a>
                     <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
                 </li>
             {% endfor %}

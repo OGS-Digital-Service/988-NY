@@ -1,7 +1,11 @@
-* {
+nysds-hero * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box; 
+}
+
+nysds-hero {
+    all: unset
 }
 
 .nysds-hero-container {
@@ -43,24 +47,18 @@
     margin-top: 35px;
 }
 
-.nysds-hero-link {
+nysds-hero .link {
     color: #FACE00;
     text-transform: uppercase;
     font-weight: bold;
+    text-decoration: underline;
 }
 
-::slotted(a) {
-    color: #FACE00;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.nysds-hero-link:hover {
+nysds-hero .link:hover {
     text-decoration-thickness: 3px;
-    
 }
 
-.nysds-hero-link:focus {
+nysds-hero .link:focus {
     text-decoration-thickness: 3px;
     outline-offset: 4px;
 }
