@@ -1,8 +1,7 @@
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    
+    -moz-box-sizing: border-box; 
 }
 
 .nysds-hero-container {
@@ -20,8 +19,8 @@
 .nysds-hero-title {
     font-size: 36px;
     line-height: 1.15em;
-    font-weight: bold;
-
+    font-weight: 500;
+    font-family: "ProximaNovaExtrabold",sans-serif;
 }
 
 .nysds-hero-description {

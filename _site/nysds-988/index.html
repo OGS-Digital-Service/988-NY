@@ -146,8 +146,7 @@ template.innerHTML = `
     <style>* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    
+    -moz-box-sizing: border-box; 
 }
 
 .nysds-hero-container {
@@ -165,8 +164,8 @@ template.innerHTML = `
 .nysds-hero-title {
     font-size: 36px;
     line-height: 1.15em;
-    font-weight: bold;
-
+    font-weight: 500;
+    font-family: "ProximaNovaExtrabold",sans-serif;
 }
 
 .nysds-hero-description {
@@ -251,36 +250,24 @@ template.innerHTML = `
     }
 }
 </style><section class="nysds-hero-container  hhs-mid ">
-
     <div class="nysds-hero-information hhs-dark">
-
         
-
         <h2 class="nysds-hero-title"><slot name="heading"></slot></h2>
-        
-
         <p class="nysds-hero-description"><slot name="description"></slot></p>
-
         
-
         <ul class="nysds-hero-links-list">
             
                 <li>
-                    <a class="nysds-hero-link" href="https://ny.gov"><slot name="1"></slot>
- </a>
+                    <a class="nysds-hero-link" href="https://ny.gov"><slot name="1"></slot></a>
                     <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
                 </li>
-                
             
                 <li>
-                    <a class="nysds-hero-link" href="https://ny.gov"><slot name="2"></slot>
- </a>
+                    <a class="nysds-hero-link" href="https://ny.gov"><slot name="2"></slot></a>
                     <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
                 </li>
-                
             
         </ul>
-        
         
     </div>
 </section>  `;
@@ -319,8 +306,7 @@ template.innerHTML = `
     <style>* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    
+    -moz-box-sizing: border-box; 
 }
 
 .nysds-hero-container {
@@ -338,8 +324,8 @@ template.innerHTML = `
 .nysds-hero-title {
     font-size: 36px;
     line-height: 1.15em;
-    font-weight: bold;
-
+    font-weight: 500;
+    font-family: "ProximaNovaExtrabold",sans-serif;
 }
 
 .nysds-hero-description {
@@ -424,36 +410,24 @@ template.innerHTML = `
     }
 }
 </style><section class="nysds-hero-container  hhs-mid ">
-
     <div class="nysds-hero-information hhs-dark">
-
         
-
         <h2 class="nysds-hero-title"><slot name="heading"></slot></h2>
-        
-
         <p class="nysds-hero-description"><slot name="description"></slot></p>
-
         
-
         <ul class="nysds-hero-links-list">
             
                 <li>
-                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="2"></slot>
- </a>
+                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="2"></slot></a>
                     <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
                 </li>
-                
             
                 <li>
-                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="1"></slot>
- </a>
+                    <a class="nysds-hero-link" href="https://ogs.ny.gov"><slot name="1"></slot></a>
                     <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
                 </li>
-                
             
         </ul>
-        
         
     </div>
 </section>  `;
