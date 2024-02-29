@@ -4,10 +4,6 @@ nysds-hero * {
     -moz-box-sizing: border-box; 
 }
 
-nysds-hero {
-    all: unset
-}
-
 .nysds-hero-container {
     width: 100%;
     display: flex;
@@ -25,6 +21,7 @@ nysds-hero {
     line-height: 1.15em;
     font-weight: 500;
     font-family: "ProximaNovaExtrabold",sans-serif;
+    margin: 0 0 30px;
 }
 
 .nysds-hero-description {
@@ -47,18 +44,20 @@ nysds-hero {
     margin-top: 35px;
 }
 
-nysds-hero .link {
+ .nysds-hero-link {
     color: #FACE00;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: underline;
 }
 
-nysds-hero .link:hover {
+.nysds-hero-link:hover {
+    color: #FACE00;
     text-decoration-thickness: 3px;
 }
 
-nysds-hero .link:focus {
+.nysds-hero-link:focus {
+    color: #FACE00;
     text-decoration-thickness: 3px;
     outline-offset: 4px;
 }
