@@ -8,6 +8,14 @@ nysds-hero * {
     width: 100%;
     display: flex;
     align-items: end;
+    min-height: 512px;
+}
+
+.nysds-hero-background-image {
+    background-image: url({{params.image}});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .nysds-hero-information {
@@ -98,6 +106,5 @@ nysds-hero * {
         width: 100%;
         display: flex;
         align-items: center;
-        min-height: 512px;
     }
 }
