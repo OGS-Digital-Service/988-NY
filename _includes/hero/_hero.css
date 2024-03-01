@@ -16,7 +16,6 @@ nysds-hero * {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-   
 }
 
 .nysds-hero-information {
@@ -88,9 +87,11 @@ nysds-hero * {
 .hhs-dark {
     background-color: #43285D;
 }
+
 .hhs-mid {
     background-color: #8b7f9f;
 }
+
 .hhs-light {
     background-color: #d3d5e3;
 }
@@ -104,6 +105,7 @@ nysds-hero * {
         padding: 45px 45px;
         border-radius: 30px;
     }
+
     .nysds-hero-container {
         width: 100%;
         display: flex;
@@ -125,9 +127,11 @@ nysds-hero * {
     .nysds-hero-links-list {
         flex-direction: row;
     }
+
     .nysds-hero-title {
         margin: 0 0 30px;
     }
+    
     .nysds-hero-links-list li {
         margin-top: 35px;
     }
