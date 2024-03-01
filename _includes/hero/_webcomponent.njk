@@ -5,10 +5,5 @@ class NYSDSHero extends HTMLElement {
 }
 window.customElements.define('nysds-hero', NYSDSHero);
 </script>
+{%- include "./_template.njk" -%}
 
-<nysds-hero>
- <style>
-      {%- include "./_hero.css" -%}
-    </style>
-    {%- include "./_template.njk" -%}
-</nysds-hero>
