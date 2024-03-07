@@ -32,6 +32,15 @@ nysds-hero * {
     margin: 0 0 20px;
 }
 
+.nysds-hero-headline {
+    color:#FACE00;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight:bold;
+}
+
 .nysds-hero-description {
     font-size: 16px;
     line-height: 25px;
@@ -131,7 +140,7 @@ nysds-hero * {
     .nysds-hero-title {
         margin: 0 0 30px;
     }
-    
+
     .nysds-hero-links-list li {
         margin-top: 35px;
     }

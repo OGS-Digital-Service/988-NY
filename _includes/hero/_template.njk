@@ -7,6 +7,9 @@
             {% if params.date %}
                 <p class="nysds-hero-date">{{params.date}}</p>
             {% endif %}
+            {% if params.headline %}
+                <p class="nysds-hero-headline">{{params.headline}}</p>
+            {%endif %}
             <h2 class="nysds-hero-title">{{params.title}}</h2>
             <p class="nysds-hero-description">{{params.description }}</p>
             {% if params.links %}
