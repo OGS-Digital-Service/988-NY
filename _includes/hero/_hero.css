@@ -45,6 +45,7 @@ nysds-hero * {
 }
 
 .nysds-hero-description {
+    display: block;
     font-size: 16px;
     line-height: 25px;
     margin: 0;
