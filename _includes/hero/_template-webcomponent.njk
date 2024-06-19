@@ -1,4 +1,7 @@
-
+<style>
+    {%- include "./_hero.css" -%}
+</style>
+<nysds-hero>
     <section class="nysds-hero-container {% if params.image %} nysds-hero-background-image {%else%} hhs-mid {%endif%}">
         <div class="nysds-hero-information hhs-dark">
             {% if params.date %}
@@ -21,3 +24,4 @@
             {%endif%}
         </div>
     </section>
+</nysds-hero>  
