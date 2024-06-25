@@ -7,7 +7,6 @@
 }
 
 .nysds-hero-background-image {
-    background-image: url({{params.image}});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
