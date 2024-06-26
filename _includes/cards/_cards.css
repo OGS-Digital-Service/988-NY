@@ -12,7 +12,7 @@
     text-align: center;
     margin-bottom: 12px;
     width: 100%;
-    font-family: 'Figtree', sans-serif;
+    font-family: "ProximaNovaBold",sans-serif;
 }
 
 .cards-wrapper {
@@ -45,13 +45,11 @@
     font-size: 18px;
     margin: 0 25px 0 0;
     font-weight: bold;
-    font-family: 'Figtree', sans-serif;
 }
 
 .card-link {
     color: #004DD1;
-    text-decoration: none;
-    font-family: 'Figtree', sans-serif;
+    text-decoration: none; 
 }
 
 .card-link:hover {
@@ -66,7 +64,6 @@
 
 .card-description {
     font-size: 16px;
-    font-family: 'Figtree', sans-serif;
     margin-bottom: 0;
 }
 
@@ -74,7 +71,6 @@
     font-size: 17px;
     margin: 15px 0px;
     text-align: center;
-    font-family: 'Figtree', sans-serif;
 }
 
 
