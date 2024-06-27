@@ -7,7 +7,9 @@
     background: none;
     font-size: 18px;
     font-weight: bold;
-    margin: 15px;
+    margin: 15px auto;
+    max-width: 1200px;
+    width: 80%;
 }
 
 .accordion-headline {
@@ -18,7 +20,7 @@
     display: block;
     text-align: center;
     padding-bottom: 15px;
-    color:#154973;
+    color:#43285D;
 }
 
 .accordion-button {
@@ -28,7 +30,7 @@
     text-align: left;
     border-top:2px solid #d0d0ce;
     border-bottom: none;
-    color: #154973;
+    color: #43285D;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +42,7 @@
     height: 18px;
     width: 18px;
     display: inline-block;
-    color: #154973;
+    color: #43285D;
 }
 
 .accordion-button:first-of-type {
