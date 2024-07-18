@@ -1,0 +1,16 @@
+.nysds-documents {
+    display: flex;
+}
+
+
+
+@media (min-width: 1024px) {
+    .cards-wrapper {
+        flex-direction: row;
+    }
+
+    .card-content {
+        padding: 35px 30px;
+    }
+    
+}
