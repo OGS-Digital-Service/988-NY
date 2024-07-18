@@ -1,13 +1,18 @@
 <section class="nysds-documents">
     {% if params.headline %}
-        <h3 class="nysds-documents-headline">{{params.headline}}</h3>
+        <h2 class="nysds-documents-headline">{{params.headline}}</h2>
     {% endif %}
     {% if params.description %}
         <p class="nysds-documents-description">{{params.description}}</p>
     {% endif %}
-        <div class="nysds-documents-list">
+        <div class="nysds-documents-container">
+            <ul class="nysds-documents-list">
             {% for document in params.documents %}
-                
+                <li class="nysds-document-item">
+                    <a href="{{document.link}}">{{document.text}}</a>
+                </li>
             {% endfor %}
+            </ul>
         </div>
 </section>
+

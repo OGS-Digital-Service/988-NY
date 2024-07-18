@@ -1,5 +1,5 @@
 <div class="cards-container">
-    <h3 class="cards-heading">{{params.heading}}</h3>
+    <h2 class="cards-heading">{{params.heading}}</h2>
     <p class="cards-intro">{{params.intro}}</p>
         <div class="cards-wrapper">
         {% for card in params.cards %}
@@ -10,9 +10,9 @@
                 </a>
                 </div>
                 <div class="card-content">
-                    <h4 class="card-title">
+                    <h3 class="card-title">
                         <a class="card-link" href="{{card.link}}">{{card.title}}</a>
-                    </h4>
+                    </h3>
                     {% if card.content %}
                     <p class="card-description">{{card.content}}</p>
                     {% endif %}
