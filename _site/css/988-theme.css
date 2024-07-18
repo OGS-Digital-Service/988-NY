@@ -582,17 +582,56 @@
 }
 .nysds-documents {
     display: flex;
+    flex-direction: column;
+}
+
+.nysds-documents-headline {
+    margin: 15px 0;
+}
+
+.nysds-documents-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nysds-documents-list {
+    list-style-type: "";
+    display: flex;
+    flex-direction: column;
+}
+
+.nysds-documents-list a[href$=".pdf"]{
+    background: none !important;
+    padding-right: initial;
+    line-height: initial;
+}
+
+.nysds-documents-list li {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-top: 1px solid #d0d0ce;
+    border-left: 1px solid #d0d0ce;
+    border-right: 1px solid #d0d0ce;
+    overflow: hidden;
+}
+
+.nysds-document-download {
+    margin-left: auto;
 }
 
 
+.nysds-documents-list li:first-of-type {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.nysds-documents-list li:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: 1px solid #d0d0ce;
+}
 
 @media (min-width: 1024px) {
-    .cards-wrapper {
-        flex-direction: row;
-    }
-
-    .card-content {
-        padding: 35px 30px;
-    }
-    
+   
 }

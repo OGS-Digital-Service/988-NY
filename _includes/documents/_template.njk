@@ -8,8 +8,10 @@
         <div class="nysds-documents-container">
             <ul class="nysds-documents-list">
             {% for document in params.documents %}
-                <li class="nysds-document-item">
-                    <a href="{{document.link}}">{{document.text}}</a>
+                <li>
+                    <span class="nysds-document-icon"></span>
+                    <a class="" href="{{document.link}}">{{document.text}}</a>
+                    <span class="nysds-document-download"> Download </span>
                 </li>
             {% endfor %}
             </ul>
