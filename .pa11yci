@@ -12,5 +12,5 @@
       "includeWarnings": true,
       "standard": "WCAG2AA"
     },
-    "urls": [""]
+    "urls": ["https://988-ny.netlify.app/", "https://988-ny.netlify.app/what-is-988/", "https://988-ny.netlify.app/988-resources/"]
   }
