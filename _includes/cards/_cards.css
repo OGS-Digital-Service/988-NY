@@ -19,10 +19,11 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    align-items: center;
 }
 
 .nysds-card {
-    width: 360px;
+    width: 80%;
     margin: 1.5rem 1rem;
     background: #ededed;
     border: 1px solid #d0d0ce;
@@ -72,13 +73,17 @@
     margin: 15px 10%;
     text-align: center;
 }
-
+@media (min-width: 768px) {
+    .nysds-card { 
+        width: 360px;
+    }
+}
 
 @media (min-width: 1024px) {
     .cards-wrapper {
         flex-direction: row;
+        align-items: unset;
     }
-
     .card-content {
         padding: 35px 30px;
     }
