@@ -9,16 +9,21 @@
 }
 .nysds-page {
     margin: 30px 10%;
+    
 }
+
 .nysds-page p {
     font-size: 16px;
+    color: #000;
 }
+
 .nysds-page ul {
     font-size: 16px;
+    color: #000;
 }
 .nysds-page a {
     text-decoration: underline;
-    color: #004DD1;
+    color: #0050DB;
 }
 
 .nysds-page a:hover {
@@ -238,12 +243,14 @@
 .card-description {
     font-size: 16px;
     margin-bottom: 0;
+    color:#000;
 }
 
 .cards-intro {
     font-size: 17px;
     margin: 15px 10%;
     text-align: center;
+    color: #000;
 }
 @media (min-width: 768px) {
     .nysds-card { 
