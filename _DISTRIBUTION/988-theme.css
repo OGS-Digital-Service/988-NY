@@ -16,6 +16,18 @@
 .nysds-page ul {
     font-size: 16px;
 }
+.nysds-page a {
+    text-decoration: underline;
+    color: #004DD1;
+}
+
+.nysds-page a:hover {
+    color: #154973;
+}
+
+.nysds-page a:focus {
+    color: #154973;
+}
 .nysds-hero-container {
     width: 100%;
     display: flex;
@@ -608,6 +620,7 @@
     margin-top: 20px;
 }
 
+
 .nysds-documents-headline {
     margin: 30px 0;
 }
@@ -652,11 +665,15 @@
 .nysds-document-link:focus {
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
+    outline: 2px solid #154973;
+    color:#154973;
 }
 
 .nysds-document-link:hover {
     text-decoration-thickness: 2px;
-    text-underline-offset: 2px;    
+    text-underline-offset: 2px;  
+    outline: 2px solid #154973;  
+    color:#154973;
 }
 
 .nysds-document-download {

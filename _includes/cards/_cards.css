@@ -66,12 +66,14 @@
 .card-description {
     font-size: 16px;
     margin-bottom: 0;
+    color:#000;
 }
 
 .cards-intro {
     font-size: 17px;
     margin: 15px 10%;
     text-align: center;
+    color: #000;
 }
 @media (min-width: 768px) {
     .nysds-card { 
